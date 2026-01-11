@@ -1,0 +1,7 @@
+Zapytanie 1: SELECT imie, nazwisko, stanowisko FROM kadra WHERE stanowisko = 'fryzjer' OR stanowisko = 'stylista'; 
+
+Zapytanie 2: SELECT COUNT(nazwa), MAX(cena) FROM uslugi WHERE rodzaj =2; 
+
+Zapytanie 3: SELECT nazwa, imie FROM uslugi JOIN kadra ON kadra_id = kadra.id WHERE rodzaj > 1;
+
+Zapytanie 4: ALTER TABLE uslugi ADD COLUMN opinia TEXT;
