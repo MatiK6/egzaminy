@@ -1,0 +1,61 @@
+body {
+    background: #EEEEEE;
+}
+
+#kontener {
+	width: 1000px;
+	margin: auto;
+	text-align: center;
+}
+
+#logo,nav,footer {
+    background: #C0C0C0;
+    height: 100px;
+    padding: 10px unset;
+}
+
+#logo,nav {
+    float: left;
+}
+
+header {
+    clear: both;
+}
+
+#logo {
+    width: 400px;
+}
+
+nav {
+    width: 600px;
+}
+
+header {
+    background: #DDDDDD;
+    height: 200px;
+}
+
+main {
+    padding: 50px;
+}
+
+footer {
+    text-align: right;
+}
+
+nav a {
+    color: #555555;
+    padding: 50px;
+    font-size: 200%;
+    text-decoration: none;
+}
+
+hr {
+    background: #C0C0C0;
+    width: 70%;
+    height: 2px;
+}
+
+table {
+    text-align: left;
+}

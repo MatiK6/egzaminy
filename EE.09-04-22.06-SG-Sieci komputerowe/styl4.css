@@ -1,0 +1,57 @@
+* {
+    font-family: 'Verdana';
+    text-align: center;
+    box-sizing: border-box;
+}
+
+header {
+    background: darkgreen;
+    color: white;
+    padding: 5px;
+}
+
+#lewy {
+    background: palegreen;
+    width: 30%;
+    height: 500px;
+    float: left;
+}
+
+#prawy {
+    background: honeydew;
+    width: 70%;
+    height: 500px;
+    padding-top: 100px;
+    float: left;
+}
+
+footer {
+    clear: both;
+    background: palegreen;
+    padding: 3px;
+}
+
+table,td {
+    border: 1px solid darkgreen;
+    border-collapse: collapse;
+}
+
+table {
+    margin: auto;
+    width: 95%;
+}
+
+td,th {
+    padding: 20px 0;
+}
+
+button {
+    background: darkgreen;
+    color: white;
+    padding: 5px;
+}
+
+button:hover {
+    background: honeydew;
+    color: darkgreen;
+}
