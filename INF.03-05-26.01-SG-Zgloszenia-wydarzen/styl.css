@@ -1,0 +1,50 @@
+*{
+  font-family: Tahoma;
+}
+header, footer{
+  background-color: Maroon;
+  color: white;
+  padding: 10px;
+}
+
+#sectionLeft, #sectionRight{
+  width: 50%;
+  height: 500px;
+  float: left;
+}
+#sectionLeft{
+  background-color: LightSalmon;
+}
+#sectionRight{
+  background-color: darksalmon;
+}
+h1,h2,h3{
+  text-align: center;
+}
+table, td{
+  border: 1px solid Maroon;
+}
+table{
+  width: 85%;
+  border-collapse: collapse;
+  margin: auto;
+}
+ol{
+  list-style-type: none;
+}
+button{
+  background-color: maroon;
+  color: white;
+  margin-left: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+
+}
+button:hover{
+  background-color: white;
+  color: maroon;
+}
+footer{
+  clear: both;
+}

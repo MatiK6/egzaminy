@@ -1,0 +1,4 @@
+Zapytanie 1: SELECT id, imie, nazwisko FROM personel WHERE status = 'policjant';
+Zapytanie 2: SELECT typ, COUNT(typ) FROM pojazdy GROUP BY typ;
+Zapytanie 3: SELECT personel.id, personel.nazwisko FROM personel LEFT JOIN rejestr ON personel.id = rejestr.id_personel WHERE rejestr.id_personel IS NULL;
+Zapytanie 4: INSERT INTO `rejestr` (`id`, `data`, `id_personel`, `id_pojazd`) VALUES (NULL, CURRENT_DATE(), '1', '14');
