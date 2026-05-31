@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pola figur</title>
+  <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+  
+<header>
+  <h2>Pola figur płaskich</h2>
+</header>
+
+<main>
+  <nav>
+    <h3>MENU</h3>
+    <ul>
+      <a href="index.html">Prostokąt i trójkąt</a>
+      <a href="kolo.html">Okrąg i koło</a>
+    </ul>
+  </nav>
+  <section>
+    <img src="1d.bmp" alt="Figura" id="figura"> 
+    <br>
+    <img src="1m.bmp" alt="Wybierz trójkąt" class="trojkatProstokat" id="1m" onclick="podmianaZdj(1)">
+    <img src="2m.bmp" alt="Wybierz prostokąt" class="trojkatProstokat" id="2m" onclick="podmianaZdj(2)">
+
+  </section>
+  <aside>
+    <h3>Pole prostokąta / pole trójkąta</h3>
+    <label for="podstawaFigury">Bok prostokąta / podstawa trójkąta</label>
+    <input type="text" id="podstawaFigury" name="podstawaFigury">
+    <br>
+    <label for="wysokoscFigury">Bok prostokąta / wysokość trójkąta</label>
+    <input type="text" id="wysokoscFigury" name="wysokoscFigury">
+    <br>
+    <button onclick="pole()">Oblicz</button>
+    <p id="wynik"></p>
+  </aside>
+</main>
+
+<footer>
+  <p>Autor: 8172947890</p>
+</footer>
+</body>
+</html>
+<script src="skrypt.js"></script>
