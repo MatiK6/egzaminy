@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stylizacja paznokcji</title>
+  <link rel="stylesheet" href="styl.css">
+</head>
+<body onload="genZdjec()">
+  <aside>
+    <img src="manicure.jpg" alt="Stylizacja paznokci">
+  </aside>
+  <main>
+    <header>
+      <h1>Twoje wymarzone paznokcie</h1>
+    </header>
+    <nav>
+      <button id="button1" onmouseover="blokKolor()">Kolor</button>
+      <button id="button2" onmouseover="blokKsztalt()">Kształt</button>
+      <button id="button3" onmouseover="blokWzor()">Wzór</button>
+    </nav>
+    <section id="sekcja1">
+      <h2>Kolor</h2>
+      <img src="kolory.png" alt="Kolory paznokci">
+      <br>
+      <input type="color" name="inputKolor" id="inputKolor" value="#FF0000">
+    </section>
+    <section id="sekcja2">
+      <h2>Kształt</h2>
+      <img src="ksztalt.png" alt="Kolory paznokci">
+      <br>
+      <select name="" id="">
+        <option>migdał</option>
+        <option>zaokrąglony</option>
+        <option>kwadratowy</option>
+        <option>balerina</option>
+        <option>zaokrąglony kwadrat</option>
+      </select>
+    </section>
+    <section id="sekcja3">
+      <h2>Wzór</h2>
+      <div id="zdjecia"></div>
+      <script>
+
+      </script>
+
+      <input type="number" min="1" max="10">
+    </section>
+    <footer>
+      <p>Autor strony 5328526839</p>
+    </footer>  
+  </main>
+
+
+
+</body>
+</html>
+<script>
+
+  //skrypt1
+  function genZdjec(){
+    const zdjeciaDiv = document.getElementById("zdjecia")
+    for(i=1; i<=10; i++){
+      let zdjecie = document.createElement("img")
+      zdjecie.src = `${i}.jpg`
+      zdjeciaDiv.appendChild(zdjecie)
+      zdjecie.className = "wzory"
+      zdjecie.title = i
+    }
+  }
+
+  //skrypt2
+  const sekcja1 = document.getElementById('sekcja1')
+  const sekcja2 = document.getElementById('sekcja2')
+  const sekcja3 = document.getElementById('sekcja3')
+
+  const button1 = document.getElementById('button1')
+  const button2 = document.getElementById('button2')
+  const button3 = document.getElementById('button3')
+  function blokKolor(){
+    sekcja1.style.display = "block"
+    sekcja2.style.display = "none"
+    sekcja3.style.display = "none"
+
+    button1.style.backgroundColor = "Salmon"
+    button2.style.backgroundColor = "Crimson"
+    button3.style.backgroundColor = "Crimson"
+  }
+
+  function blokKsztalt(){
+    sekcja1.style.display = "none"
+    sekcja2.style.display = "block"
+    sekcja3.style.display = "none"
+
+    button1.style.backgroundColor = "Crimson"
+    button2.style.backgroundColor = "Salmon"
+    button3.style.backgroundColor = "Crimson"
+  }
+
+  function blokWzor(){
+    sekcja1.style.display = "none"
+    sekcja2.style.display = "none"
+    sekcja3.style.display = "block"
+
+    button1.style.backgroundColor = "Crimson"
+    button2.style.backgroundColor = "Crimson"
+    button3.style.backgroundColor = "Salmon"
+  }
+</script>

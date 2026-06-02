@@ -1,0 +1,56 @@
+*{
+  font-family: Trebuchet 'Trebuchet MS', sans-serif;
+}
+body{
+  background-color: blanchedalmond;
+  text-align: center;
+}
+aside{
+  width: 20%;
+  float: left;
+}
+aside img{
+  width: 100%;
+}
+main{
+  width: 80%;
+  float: left;
+}
+nav{
+  text-align: left;
+  margin-left: 10%;
+
+}
+section{
+  background-color: salmon;
+  margin-left: 10%;
+  padding: 10px;
+  height: 250px;
+}
+#sekcja1{
+  display: block;
+}
+#sekcja2{
+  display: none;
+}
+#sekcja3{
+  display: none;
+}
+button{
+  width: 26%;
+  color: white;
+  border: none;
+  font-size: 200%;
+  background-color: crimson;
+}
+#button1{
+  background-color: salmon;
+}
+.wzory{
+  width: 70px;
+  margin: 5px;
+  border-radius: 100%;
+}
+footer{
+  clear: both;
+}
