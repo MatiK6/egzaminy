@@ -2,15 +2,7 @@
 $conn = new mysqli('localhost', 'root', '', 'przewozy');
 ?>
 
-<?php
-    if(isset($_GET['delete'])){
-        $id = $_GET['delete'];
-        $sql = "DELETE FROM zadania WHERE id_zadania = ".$id.";";
-        mysqli_query($conn, $sql);
-    }
 
-
-?>
 
 
 <!DOCTYPE html>
@@ -53,6 +45,12 @@ $conn = new mysqli('localhost', 'root', '', 'przewozy');
                                 echo "<td>".$row['data']."</td>";
                                 echo "<td><a href='?delete=".$row['id_zadania']."'>Usuń</a></td>";
                             echo "</tr>";
+                        }
+
+                        if(isset($_GET['delete'])){
+                            $id = $_GET['delete'];
+                            $sql = "DELETE FROM zadania WHERE id_zadania = ".$id.";";
+                            mysqli_query($conn, $sql);
                         }
                     ?>
                     
