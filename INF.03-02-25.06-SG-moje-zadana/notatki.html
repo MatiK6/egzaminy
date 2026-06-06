@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planer zadan</title>
+  <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+  
+<aside>
+  <img src="obraz.jpg" alt="notatki">
+</aside>
+<header>
+  <h2>Moje zadania</h2>
+</header>
+<nav>
+  <input type="text" name="zadanie" id="zadanie" placeholder="Dodaj zadanie...">
+  <button onclick="dodaj()">Dodaj</button>
+</nav>
+<main>
+  <ul id="lista">
+    <li id="li1">
+      Wyprowadzić psa
+      <button onclick="wykonane(1)">Wykonane</button>
+    </li>
+    <li id="li2">
+      Gimnastyka
+      <button onclick="wykonane(2)">Wykonane</button>
+    </li>
+    <li id="li3">
+      Zakupy
+      <button onclick="wykonane(3)">Wykonane</button>
+    </li>
+    <li id="li4">
+      Spacer z kumplem
+      <button onclick="wykonane(4)">Wykonane</button>
+    </li>
+    <li id="li5">
+      Odrabianie lekcji z młodszą siostrą
+      <button onclick="wykonane(5)">Wykonane</button>
+    </li>
+    <li id="li6">
+      Projekt na geografię 
+      <button onclick="wykonane(6)">Wykonane</button>
+    </li>
+  </ul>
+</main>
+<footer>
+  <h3>Notatki: 523885926</h3>
+</footer>
+
+</body>
+</html>
+
+<script>
+const lista = document.getElementById("lista")
+let id = 6
+
+function dodaj(){
+  id++
+
+  let zadanie = document.getElementById('zadanie').value;
+  elementListy = document.createElement("li")
+  elementListy.innerText = zadanie
+  elementListy.id = `li${id}`
+  
+  przyciskWLiscie = document.createElement('button')
+  przyciskWLiscie.innerText = "Wykonane"
+  przyciskWLiscie.setAttribute("onclick", `wykonane(${id})`)
+  elementListy.appendChild(przyciskWLiscie)
+  lista.appendChild(elementListy)
+
+  console.log(id)
+
+}
+function wykonane(x){
+  idElementuListy = x
+  let doWykreslenia = document.getElementById(`li${idElementuListy}`)
+  doWykreslenia.style.textDecoration = "line-through"
+}
+
+
+</script>
