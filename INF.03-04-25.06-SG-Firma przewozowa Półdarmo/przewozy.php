@@ -37,21 +37,22 @@ $conn = new mysqli('localhost', 'root', '', 'przewozy');
                     <?php
                         // Skrypt 1
                         $sql = "SELECT id_zadania, zadanie, data FROM zadania;";
-                        $response = mysqli_query($conn, $sql);
-
-                        while($row = mysqli_fetch_assoc($response)){
+                        $reuslt = mysqli_query($conn, $sql);
+                        while($row = mysqli_fetch_row($reuslt)){
                             echo "<tr>";
-                                echo "<td>".$row['zadanie']."</td>";
-                                echo "<td>".$row['data']."</td>";
-                                echo "<td><a href='?delete=".$row['id_zadania']."'>Usuń</a></td>";
+                                echo "<td>$row[1]</td>";
+                                echo "<td>$row[2]</td>";
+                                echo "<td><a href='przewozy.php?idToDelete=$row[0]'>Usun</a></td>";                           
                             echo "</tr>";
+
+                        }
+                        if(isset($_GET['idToDelete'])){
+                            $idToDelete = $_GET['idToDelete'];
+                            $sql2 = "DELETE FROM zadania WHERE id_zadania = $idToDelete;";
+                            mysqli_query($conn, $sql2);
                         }
 
-                        if(isset($_GET['delete'])){
-                            $id = $_GET['delete'];
-                            $sql = "DELETE FROM zadania WHERE id_zadania = ".$id.";";
-                            mysqli_query($conn, $sql);
-                        }
+                        
                     ?>
                     
                 </table>
@@ -64,14 +65,16 @@ $conn = new mysqli('localhost', 'root', '', 'przewozy');
                 </form>
                 <?php
                     // Skrypt 2
+                    if(isset($_POST['zadanie'])&&isset($_POST['data'])){
+                        $zadanie = $_POST['zadanie'];
+                        $data = $_POST['data'];
 
-                    if(isset($_POST['zadanie']) && $_POST['data']){
-                            $zadanie = $_POST['zadanie'];
-                            $data = $_POST['data'];    
-
-                            $sql2 = "INSERT INTO zadania VALUES (NULL, '".$zadanie."', '".$data."', 1);";
-                            mysqli_query($conn, $sql2);
+                        $sql3 ="INSERT INTO zadania VALUES (NULL, '$zadanie', '$data', 1);";
+                        mysqli_query($conn, $sql3);
                     }
+                    
+
+                    
 
                 ?>
             </section>
