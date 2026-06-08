@@ -1,0 +1,4 @@
+Zapytanie 1: SELECT nr_klienta, liczba_odbitek FROM zamowienia WHERE liczba_odbitek > 100;
+Zapytanie 2: SELECT (liczba_odbitek * cena) AS 'Do zapłaty' FROM zamowienia JOIN zdjecia ON zamowienia.rodzaj = zdjecia.rodzaj WHERE nr_klienta = 3;
+Zapytanie 3: SELECT SUM(liczba_odbitek) FROM zamowienia WHERE rodzaj = "błyszczący";
+Zapytanie 4: CREATE USER 'Anna'@localhost IDENTIFIED BY "@NNa";
