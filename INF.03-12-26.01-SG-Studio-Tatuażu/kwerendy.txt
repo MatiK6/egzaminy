@@ -1,0 +1,4 @@
+Zapytanie 1: SELECT wzor, cena FROM tatuaze WHERE kolor = 'czarny' AND cena > 100 ORDER BY cena DESC;
+Zapytanie 2: SELECT kolor, COUNT(id) FROM tatuaze GROUP BY kolor;
+Zapytanie 3: SELECT tatuaze.wzor, style.nazwa FROM tatuaze JOIN style ON style.id = tatuaze.style_id WHERE kolor = 'zielony';
+Zapytanie 4: UPDATE tatuaze SET cena = '110%' WHERE tatuaze.kolor = 'czerwony';

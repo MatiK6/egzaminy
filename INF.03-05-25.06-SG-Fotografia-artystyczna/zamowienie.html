@@ -62,7 +62,6 @@
     let = papierBlyszczacy = document.getElementById('papierBlyszczacy').checked
     let = papierMatowy = document.getElementById('papierMatowy').checked
 
-    // console.log(nazwaPliku, liczbaKopii, papierBlyszczacy, papierMatowy)
 
     let cenaBlyszczacego = 1.5
     let cenaMatowego = 2
@@ -74,7 +73,7 @@
     if(papierMatowy == true){
       cenaOstateczna = liczbaKopii * cenaMatowego
     }
-    // console.log(cenaOstateczna)
+
     let elementZdjecie = document.createElement("img")
     let elementLiczbaKopii = document.createElement("p")
     let elementCena = document.createElement("p")

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tatuaże</title>
+  <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+
+  <header id="header1">
+    <img src="logo.png" alt="salon">
+  </header>
+  <header id="header2">
+    <h2>Studio Tatuażu</h2>
+  </header>
+
+
+  <section id="blokSekcji">
+    <h3>Galeria</h3>
+    <img src="smok.png" alt="smok.png" class="miniatury">
+    <img src="koliber.png" alt="koliber.png" class="miniatury">
+  </section>
+  
+
+  <aside>
+    <h3>Dodaj wzór</h3>
+    <label for="Wzor">Wzor:</label><br>
+    <input type="file" accept="image/png" name="Wzor" id="Wzor"><br>
+    <label for="Kolor">Kolor:</label><br>
+    <select name="Kolor" id="Kolor">
+      <option value="Czarny">Czarny</option>
+      <option value="Czerwony">Czerwony</option>
+      <option value="Zielony">Zielony</option>
+      <option value="Niebieski">Niebieski</option>
+    </select><br>
+    <label for="Cena">Cena:</label><br>
+    <input type="number" name="Cena" id="Cena"><br>
+    <button onclick="dodajWzor()">Dodaj Wzór</button>
+  </aside>
+
+  <footer>
+    <p>Autor strony: 82357907890523</p>
+  </footer>
+
+
+</body>
+</html>
+
+<script>
+function dodajWzor(){
+  const blokSekcji = document.getElementById("blokSekcji")
+  let wzor = document.getElementById('Wzor').files[0]
+  let kolor = document.getElementById('Kolor').value
+  let cena = document.getElementById('Cena').value
+
+  let nazwaPliku = wzor.name
+
+  alert(`Wzór: ${nazwaPliku}, kolor ${kolor} w cenie ${cena} zł`)
+
+  elementZdjecie = document.createElement("img")
+  elementZdjecie.src = nazwaPliku
+  elementZdjecie.alt = nazwaPliku
+  elementZdjecie.className = "miniatury"
+  blokSekcji.appendChild(elementZdjecie)
+
+}
+
+function test(){
+
+  let liczba = 202
+  x = parseInt(liczba)
+  y = x.toString(2)
+
+  let z = ""
+  for(i = 0; i < y.length; i += 4){
+    z += y.slice(i, i+4) + " "
+  }
+
+  console.log(y)
+
+  console.log(z)
+
+
+}
+
+
+
+
+</script>
