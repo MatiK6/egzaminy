@@ -1,0 +1,9 @@
+Zapytanie 1: SELECT nazwa, trudnosc, kalorie FROM potrawy WHERE idPotrawy = 7;
+
+Zapytanie 2: SELECT potrawy.nazwa, rodzaje.rodzaj FROM rodzaje JOIN potrawy ON rodzaje.idRodzaje = potrawy.idRodzaje WHERE potrawy.idPotrawy = 7;
+
+Zapytanie 3: SELECT potrawy.nazwa, alergeny.alergen FROM potrawy
+              JOIN lista_alergenow ON potrawy.idPotrawy = lista_alergenow.idPotrawy JOIN alergeny
+              ON alergeny.idAlergeny = lista_alergenow.idAlergeny WHERE potrawy.idPotrawy = 7;
+
+Zapytanie 4: SELECT przepis, plik FROM potrawy WHERE idPotrawy = 7;
